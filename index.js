@@ -23,7 +23,7 @@ function start() {
         const selectedPrefixIndex = readline.keyInSelect(prefixes, 'Choose one option: ')
         //pega o texto do indice
         const selectedPrefixText = prefixes[selectedPrefixIndex]
-        //injeto o valor do texto na propriedade prefix
+        //injeta o valor do texto na propriedade prefix
         return selectedPrefixText
     }
 
