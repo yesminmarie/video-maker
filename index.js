@@ -1,6 +1,9 @@
 const readline = require('readline-sync')
+const robots = {
+    text: require('./robots/text.js')
+}
 
-function start() {
+async function start() {
     const content = {}
 
     //termo de busca
@@ -8,6 +11,8 @@ function start() {
     //esse prefixo vai ser utilizado quando fizer o upload no YouTube
     //para o título ficar mais "humanamente" legível
     content.prefix = askAndReturnPrefix()
+
+    await robots.text(content)
 
     function askAndReturnSearchTerm() {
         //vai rodar o método question da biblioteca readline 
